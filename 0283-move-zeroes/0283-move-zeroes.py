@@ -8,3 +8,4 @@ class Solution:
                 last_non_zero += 1
         for i in range(last_non_zero, n):
             nums[i] = 0
+        
