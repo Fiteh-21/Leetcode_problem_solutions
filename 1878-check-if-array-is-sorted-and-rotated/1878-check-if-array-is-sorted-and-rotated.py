@@ -1,10 +1,10 @@
 class Solution:
     def check(self, nums: List[int]) -> bool:
         n = len(nums)
-        count = 0
-        for i in range(n):
-            if nums[i] > nums[(i+1) % n]:
-                count += 1
-            if count > 1:
-                return False
-        return True
+        for x in range(n):
+            new_nums = []
+            for i in range(n):
+                new_nums.append(nums[(i+x) % n ])
+            if new_nums == sorted(nums):
+                return True
+        return False
